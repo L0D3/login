@@ -8,6 +8,8 @@ gem 'rails', '3.2.1'
 gem 'execjs'
 gem 'therubyracer'
 gem 'mysql2'
+gem "ruby-mcrypt", :require=> "mcrypt"
+gem "bcrypt-ruby", :require => "bcrypt"
 
 
 # Gems used only for assets and not required

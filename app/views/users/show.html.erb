@@ -1,0 +1,8 @@
+<div data-role="header">
+  <h1><%=@user.username%></h1>
+  <%= link_to 'Delete', @user, :method => :delete, "data-icon" => "delete", "class" => "ui-btn-right" %>
+   <%= link_to 'Home', users_url, "class" => "ui-btn-left" %>
+</div>
+ 
+<div data-role="content">
+</div>
