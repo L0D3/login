@@ -9,12 +9,15 @@
 </div>
  
 <div data-role="content">
+  <p>
+  <%= paginate @users %>
+  </p>
   <ul data-role="listview">
     <% @users.each do |user| %>
     <li>
-    <%=link_to user.username, user%>
-    <%= user.pword %>
+    <%=link_to user.username, user%><br/>
     <%=user.email%>
+  <%if !user.firstname.blank? %><br/> <%end%>
     <%=user.firstname %>
     <%=user.lastname %>
    <%= link_to 'edit user', edit_user_path(user), "data-icon" => "gear" %>

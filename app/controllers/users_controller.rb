@@ -35,6 +35,6 @@ class UsersController < ApplicationController
   
   end 
   def index
-    @users=User.all(:limit=>10)
+    @users=User.page(params[:page]).per(5)
   end
 end
