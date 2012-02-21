@@ -2,7 +2,7 @@ class AlbumsController < ApplicationController
   # GET /albums
   # GET /albums.json
   def index
-    @albums = User.find_by_username("USER..dominik").albums
+w    @albums = User.find_by_username(current_user.username).albums
 
     respond_to do |format|
       format.html # index.html.erb
