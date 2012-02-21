@@ -2,6 +2,7 @@ require 'digest/md5'
 class User < ActiveRecord::Base
   set_table_name "login"
   set_primary_key "id"
+  has_many :albums ,:foreign_key=>"creator", :primary_key=>"username"
   attr_accessible :username, :password, :password_confirmation, :firstname, :lastname, :email
 
   attr_accessor :password

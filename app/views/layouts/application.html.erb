@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+  <title>Dummy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
-  <script src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
   <%= csrf_meta_tags %>
+    <script type="text/javascript" src="lib/klass.min.js"></script>
+    <script type="text/javascript" src="code.photoswipe-3.0.4.min.js"></script>
+    <script type="text/javascript">
+
+      (function(window, PhotoSwipe){
+       document.addEventListener('DOMContentLoaded', function(){
+         var
+         options = {},
+         instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
+         }, false);
+       }(window, window.Code.PhotoSwipe));
+</script>
 </head>
 <body>
-  <div data-role="page">
 <%= yield %>
 </body>
 </html>

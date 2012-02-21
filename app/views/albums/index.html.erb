@@ -1,0 +1,13 @@
+<div data-role="header">
+  <h1> Alben</h1>
+</div>
+ 
+<div data-role="content">
+  <ul data-role="listview">
+    <% @albums.each do |album| %>
+    <li>
+    <%=link_to album.comment, photos_path(:albumid=>album.albumid),:rel=>"external"%><br/>
+    </li>
+    <% end %>
+  </ul>
+</div>

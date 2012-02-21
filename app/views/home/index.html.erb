@@ -1,0 +1,24 @@
+<!-- LOGO -->
+<div data-role="header">
+  <h1>Home</h1>
+</div>
+
+
+
+<!-- CONTENTS -->
+<div data-role="content">
+  <div class="ui-grid-a" align="center">
+    <div class="ui-block-a" align="center">
+      <%=link_to (image_tag "food-icon.png"), albums_path%>
+    </div>
+    <div class="ui-block-b" align="center">
+      <%=link_to (image_tag "book-icon.png"), users_path%>
+    </div>
+    <div class="ui-block-a" align="center">
+      <%=link_to (image_tag "profile-icon.png"), user_path(current_user)%>
+    </div>
+    <div class="ui-block-b" align="center">
+      <%=link_to (image_tag "shopping-icon.png"), users_path%>
+    </div>
+  </div>
+</div>
