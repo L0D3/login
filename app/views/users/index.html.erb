@@ -1,11 +1,8 @@
 <div data-role="header">
   <% if current_user %>
     <h1>    Logged in as <%= current_user.email %>.</h1>
-<%= link_to "Log out", log_out_path %>
-<%else%>
-  <h1> not logged in</h1>
+<%= link_to "Home", root_path %>
 <% end %>
-<%= link_to 'Add', new_user_path, "data-icon" => "plus", "class" => "ui-btn-right" %>
 </div>
  
 <div data-role="content">
@@ -20,7 +17,6 @@
   <%if !user.firstname.blank? %><br/> <%end%>
     <%=user.firstname %>
     <%=user.lastname %>
-   <%= link_to 'edit user', edit_user_path(user), "data-icon" => "gear" %>
     </li>
     <% end %>
   </ul>

@@ -1,8 +1,9 @@
 class AlbumsController < ApplicationController
+  before_filter :require_login
   # GET /albums
   # GET /albums.json
   def index
-w    @albums = User.find_by_username(current_user.username).albums
+    @albums = User.find_by_username(current_user.username).albums
 
     respond_to do |format|
       format.html # index.html.erb
