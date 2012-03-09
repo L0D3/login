@@ -1,0 +1,14 @@
+<div data-role="header">
+  <h1>Events </h1>
+<%= link_to "Home", root_path %>
+</div>
+ 
+<div data-role="content">
+  <ul data-role="listview">
+    <% @events.each do |event| %>
+    <li>
+    <%=link_to event.title, photos_path(:eventid=>event.s),:rel=>"external"%><br/>
+    </li>
+    <% end %>
+  </ul>
+</div>

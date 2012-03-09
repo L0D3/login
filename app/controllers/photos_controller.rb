@@ -1,7 +1,6 @@
 class PhotosController < ApplicationController
   before_filter :require_login
   def index
-    
-    @photos=Album.find(params[:albumid]).photos
+    @photos=Event.find(params[:eventid]).photos
   end
 end

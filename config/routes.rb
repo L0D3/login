@@ -1,5 +1,5 @@
 Login::Application.routes.draw do
-  resources :albums
+  resources :events
   resources :photos
 
   get "log_out" => "sessions#destroy", :as => "log_out"

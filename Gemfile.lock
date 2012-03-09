@@ -116,7 +116,6 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   coffee-rails (~> 3.2.1)
-  execjs
   jquery-rails
   jquery_mobile_rails
   kaminari

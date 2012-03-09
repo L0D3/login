@@ -6,10 +6,10 @@ class Photo < ActiveRecord::Base
 
 def full_path
   photoname=self.originalfilename.split "."
- "http://ubisworld.org/data/"+user.personalfolder+"/"+self.photoid.gsub("PHOTO..","")+"-o."+photoname[1].downcase
+ "http://ubisworld.org/data/"+user.personalfolder+"/"+self.photoid.gsub("PHOTO..","")+"-m.jpg"
 end
 def get_thump_path
   photoname=self.originalfilename.split "."
- "http://ubisworld.org/data/"+user.personalfolder+"/"+self.photoid.gsub("PHOTO..","")+"-m."+photoname[1].downcase
+ "http://ubisworld.org/data/"+user.personalfolder+"/"+self.photoid.gsub("PHOTO..","")+"-s.jpg"
 end
 end
