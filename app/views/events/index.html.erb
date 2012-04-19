@@ -4,6 +4,13 @@
 </div>
  
 <div data-role="content">
+  <div>
+    <%=link_to "Next",events_path(:year=>@year.to_i+1)%>
+    <%=@year%>
+    <%=link_to "Last",events_path(:year=>@year.to_i-1)%>
+  </div>
+  <br/>
+
   <ul data-role="listview">
     <% @events.each do |event| %>
     <li>
